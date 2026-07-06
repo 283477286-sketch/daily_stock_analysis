@@ -249,7 +249,17 @@ jobs:
           LLM_OLLAMA_MODELS: ${{ vars.LLM_OLLAMA_MODELS || secrets.LLM_OLLAMA_MODELS }}
           LLM_OLLAMA_ENABLED: ${{ vars.LLM_OLLAMA_ENABLED || secrets.LLM_OLLAMA_ENABLED }}
           LLM_OLLAMA_EXTRA_HEADERS: ${{ vars.LLM_OLLAMA_EXTRA_HEADERS || secrets.LLM_OLLAMA_EXTRA_HEADERS }}
-
+          LLM_OLLAMA_EXTRA_HEADERS: ${{ vars.LLM_OLLAMA_EXTRA_HEADERS || secrets.LLM_OLLAMA_EXTRA_HEADERS }}
+          
+          # ==========================================
+          # 分析模式控制（跳过大盘，只分析个股）
+          # ==========================================
+          MARKET_REVIEW_ENABLED: "false"
+          STOCK_LIST: "300760.SZ,300015.SZ,603529.SH"
+          REPORT_TYPE: "full"
+          SINGLE_STOCK_NOTIFY: "true"
+          GENERATE_MARKET_OVERVIEW: "false"
+          
           # ==========================================
           # 数据源
           # ==========================================
